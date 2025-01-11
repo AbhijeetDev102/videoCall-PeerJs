@@ -127,7 +127,7 @@ function App() {
       }}>Accept Call</button></div>}
       {(callMade==true || callAccepted==true) &&  <div><button onClick={()=>{
         
-        peer.destroy();
+        // peer.destroy();
         setCallAccepted(false)
         setCallMade(false)
         if (myVideoRef.current && myVideoRef.current.srcObject) {
