@@ -19,11 +19,7 @@ function App() {
   };
 
   useEffect(() => {
-    const peer = new Peer({
-      host: `${import.meta.env.VITE_BASE_URL}`,
-      port: `${import.meta.env.VITE_PORT}`,
-      path: '/peerjs/myapp'
-    });
+    const peer = new Peer();
     peerProvider(peer);
     peer.on("open", (id) => {
       setMyPeerId(id);
